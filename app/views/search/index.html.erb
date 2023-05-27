@@ -1,0 +1,12 @@
+<h1>Total Characters: <%= @facade.total_characters %> </h1>
+
+<% @facade.characters.each do |character| %>
+  <div class='member' id="<%= character.name %>">
+  Name: <%= character.name %></br>
+    <%= image_tag(character.photo_url) if character.photo_url %></br>
+    Allies: <%= character.allies %></br>
+    Enemies: <%= character.enemies %></br>
+    Affiliation: <%= character.affiliation %>
+    </br>
+  </div>
+<% end %>
